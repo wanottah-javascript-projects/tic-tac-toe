@@ -3,53 +3,63 @@
 <html lang="en">
 
     <head>
+        
+    <meta charset="UTF-8">
 
-        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <link rel = "stylesheet" href = "style.css"></link>
-
-        <title>Tic Tac Toe</title>
+    <title>Tic Tac Toe</title>
+    
+    <link rel="stylesheet" href="style.css">
 
     </head>
 
     <body>
 
-        <div id = "gameBoard">
+        <!-- create a table to hold the game board -->
+        <table class = "gameBoard">
 
-            <h1>Tic Tac Toe</h1>
+            <tr>
+                <td class="cell" id="0"></td>
+                <td class="cell" id="1"></td>
+                <td class="cell" id="2"></td>
+            </tr>
 
-            <div id = "gameBoardContainer">
+            <tr>
+                <td class="cell" id="3"></td>
+                <td class="cell" id="4"></td>
+                <td class="cell" id="5"></td>
+            </tr>
 
-                <div class = "cell" cellIndex = "0"></div>
+            <tr>
+                <td class="cell" id="6"></td>
+                <td class="cell" id="7"></td>
+                <td class="cell" id="8"></td>
+            </tr>
 
-                <div class = "cell" cellIndex = "1"></div>
+        </table>
 
-                <div class = "cell" cellIndex = "2"></div>
+        <div class="endgame">
 
-                <div class = "cell" cellIndex = "3"></div>
-
-                <div class = "cell" cellIndex = "4"></div>
-
-                <div class = "cell" cellIndex = "5"></div>
-
-                <div class = "cell" cellIndex = "6"></div>
-
-                <div class = "cell" cellIndex = "7"></div>
-
-                <div class = "cell" cellIndex = "8"></div>
-
-            </div>
-
-            <h2 id = "gameStatusText"></h2>
-
-            <button id = "restartButton">Restart</button>
+            <div class="text"></div>
 
         </div>
 
-        <script src = "app.js"></script>
+        <div class = "selectSym">
+
+            <p>Select symbol:</p>
+
+            <button type = "button" onClick = "selectSym('X')">X</button>
+
+            <button type = "button" onClick = "selectSym('O')">O</button>
+
+        </div>
         
+
+        <button type = "button" onClick = "startGame()">Replay</button>
+
+    <script src="script.js"></script>
+
     </body>
 
 </html>
