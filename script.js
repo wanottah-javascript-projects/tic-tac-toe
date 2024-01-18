@@ -1,6 +1,6 @@
 let origBoard;
 
-let huPlayer; // = 'O';
+let humanPlayer; // = 'O';
 
 let aiPlayer; // = 'X';
 
@@ -29,7 +29,7 @@ startGame();
 
 function selectSym(sym)
 {
-	huPlayer = sym;
+	humanPlayer = sym;
 
 	aiPlayer = sym === 'O' ? 'X' :'O';
 
@@ -79,9 +79,9 @@ function turnClick(square)
 {
 	if (typeof origBoard[square.target.id] == 'number') 
   	{
-		turn(square.target.id, huPlayer)
+		turn(square.target.id, humanPlayer)
 
-		if (!checkWin(origBoard, huPlayer) && !checkTie())
+		if (!checkWin(origBoard, humanPlayer) && !checkTie())
 		{
 			turn(bestSpot(), aiPlayer);
 		}
@@ -130,7 +130,7 @@ function gameOver(gameWon)
 {
 	for (let index of winCombos[gameWon.index]) 
   	{
-		document.getElementById(index).style.backgroundColor = gameWon.player == huPlayer ? "blue" : "red";
+		document.getElementById(index).style.backgroundColor = gameWon.player == humanPlayer ? "blue" : "red";
 	}
 
 	for (var i = 0; i < cells.length; i++) 
@@ -138,7 +138,7 @@ function gameOver(gameWon)
 		cells[i].removeEventListener('click', turnClick, false);
 	}
 
-	declareWinner(gameWon.player == huPlayer ? "You win!" : "You lose.");
+	declareWinner(gameWon.player == humanPlayer ? "You win!" : "You lose.");
 }
 
 
@@ -186,7 +186,7 @@ function minimax(newBoard, player)
 {
 	var availSpots = emptySquares();
 
-	if (checkWin(newBoard, huPlayer)) 
+	if (checkWin(newBoard, humanPlayer)) 
   	{
 		return {score: -10};
 	} 
@@ -213,7 +213,7 @@ function minimax(newBoard, player)
 
 		if (player == aiPlayer) 
     	{
-			var result = minimax(newBoard, huPlayer);
+			var result = minimax(newBoard, humanPlayer);
 
 			move.score = result.score;
 		} 
