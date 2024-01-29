@@ -16,8 +16,8 @@
 
     <body>
 
-        <!-- create a table to hold the game board -->
-        <table class = "gameBoard">
+        <!-- table to hold the game board -->
+        <table id = "gameBoard">
 
             <tr>
                 <td class="cell" id="0"></td>
@@ -45,18 +45,31 @@
 
         </div>
 
-        <div class = "selectSym">
+        <!-- player select panel -->
+        <div class = "playerSymbolPanel">
 
-            <p>Select symbol:</p>
+            <div class = "symbolPanel">
 
-            <button type = "button" onClick = "selectSym('X')">X</button>
+                <p>Select symbol:</p>
 
-            <button type = "button" onClick = "selectSym('O')">O</button>
+                <button id = "xButton" type = "button">X</button>   <!--onClick = "selectPlayerSymbol('X')">X</button>-->
+
+                <button id = "oButton" type = "button">O</button>   <!--onClick = "selectPlayerSymbol('O')">O</button>-->
+
+            </div>
 
         </div>
         
+        <!-- restart button panel -->
+        <div class = "gameButtonPanel">
+            
+            <div class = "buttonPanel">
 
-        <button type = "button" onClick = "startGame()">Replay</button>
+                <button id = "restartButton" type = "button">Replay</button>
+
+            </div>
+
+        </div>
 
     <script src="script.js"></script>
 
