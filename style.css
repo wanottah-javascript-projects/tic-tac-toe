@@ -1,0 +1,176 @@
+
+body 
+{
+	background: #202020;
+}
+
+
+*
+{
+	font-family: "Permanent Marker", cursive;
+}
+
+
+#board
+{
+	margin-top: 80px;
+}
+
+
+.row 
+{
+	display: flex;
+
+	flex-direction: row;
+
+	justify-content: center;
+
+	margin: 1px;
+}
+
+
+.cell
+{
+	display: inline-block;
+
+	width: 88px;
+
+	height: 88px;
+	
+	background: white;
+
+	border-radius: 16px;
+
+	border: 4px solid grey;
+
+	margin: 4px;
+
+	text-align: center;
+
+	font-size: 57px;
+}
+
+
+.highlight
+{
+	border-color: red;
+}
+
+
+
+.endgame 
+{
+	width: 100%;
+
+	top: 350px;
+
+	position: absolute;
+
+	padding-top: 50px;
+
+	padding-bottom: 50px;
+
+	text-align: center;
+
+	border-radius: 5px;
+
+	color: white;
+
+	font-size: 2em;
+}
+
+
+.gameButtonPanel
+{
+	width: 100%;
+
+	top: 460px;
+
+	position: absolute;
+}
+
+
+#restartButton
+{
+	height: 50px;
+
+	width: 150px;
+
+	border: 2px solid black;
+
+	border-radius: 10px;
+
+	font-size: 30px;
+}
+
+
+.buttonPanel
+{
+	margin: auto;
+	
+	text-align: center;
+
+	color: black;
+}
+
+
+.playerSymbolPanel
+{
+	display: none;
+
+	width: 100%;
+
+	top: 110px;
+
+	position: absolute;
+}
+
+
+.symbolPanel
+{
+	width: 320px;
+
+	background-color: rgba(205, 133, 63, 0.8);
+	
+	padding-top: 10px;
+
+	padding-bottom: 50px;
+
+	margin: auto;
+
+	text-align: center;
+
+	border-radius: 5px;
+
+	color: yellow;
+
+	font-size: 2em;
+}
+  
+
+.playerSymbolPanel button
+{
+	font-size:  50px;
+
+	width: 70px;
+}
+  
+
+.playerSymbolPanel  button:first-of-type 
+{
+	margin-right: 10px;
+}
+
+
+.playerSymbolPanel  button:last-of-type 
+{
+	margin-left: 10px;
+}
+
+
+#gameBoard2
+{
+	/*display: none;*/
+	margin-top: 48px;
+}
+
